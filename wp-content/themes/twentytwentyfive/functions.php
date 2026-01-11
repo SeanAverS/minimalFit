@@ -49,14 +49,13 @@ if ( ! function_exists( 'twentytwentyfive_enqueue_styles' ) ) :
 	 * @return void
 	 */
 	function twentytwentyfive_enqueue_styles() {
-		$suffix = SCRIPT_DEBUG ? '' : '.min';
-		$src    = 'style' . $suffix . '.css';
+		$src = 'style.css';
 
 		wp_enqueue_style(
 			'twentytwentyfive-style',
 			get_parent_theme_file_uri( $src ),
 			array(),
-			wp_get_theme()->get( 'Version' )
+			filemtime( get_parent_theme_file_path( $src ) )
 		);
 		wp_style_add_data(
 			'twentytwentyfive-style',
