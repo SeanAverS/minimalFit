@@ -88,3 +88,17 @@ h1, h2, h3, h4, h5, h6, blockquote, caption, figcaption, p {
     transform: translateY(-10px);
     z-index: 10; 
 }
+
+/* Hide zoom on image when mouse hover functionality */
+.zoomImg {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+/* Prevent jitter if script tries to move product container */
+.woocommerce-product-gallery, 
+.woocommerce-product-gallery__wrapper,
+.woocommerce-product-gallery__image {
+    transform: none !important;
+    pointer-events: auto !important; 
+}
