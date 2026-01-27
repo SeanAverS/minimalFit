@@ -1,26 +1,16 @@
-# Ignore WordPress Core
-wp-admin/
-wp-includes/
-index.php
-license.txt
-readme.html
-wp-*.php
+# Ignore everything
+/*
+!.gitignore
+
+# Allow Theme
 !wp-content/
-xmlrpc.php
+!wp-content/themes/
+wp-content/themes/twentytwenty*
+!wp-content/themes/minimalfit/
 
-# Ignore Server/Local Config
-.htaccess
-wp-config.php
-local-xdebuginfo.php
-wp-config-sample.php
-
-# Ignore Heavy/Temporary Content
-wp-content/uploads/
-wp-content/upgrade/
-wp-content/cache/
-node_modules/
-*.log
-
-# Ignore the plugin itself
-wp-content/plugins/create-block-theme/
-wp-content/plugins/kadence-woocommerce-email-designer/
+# Ignore Backups & Junk
+wp-content/plugins/*
+wp-content/uploads/*
+wp-content/ai1wm-backups/
+wp-content/updraft/
+.DS_Store
